@@ -1,0 +1,13 @@
+:root {
+  --gray: gray;
+  --light-gray: lightgray;
+  --active: #4d67ff;
+
+  --offset: 16px;
+  --offset-small: 8px;
+  --offset-xsmall: 4px;
+
+  --border-radius: 4px;
+
+  --transition-duration: .2s;
+}
