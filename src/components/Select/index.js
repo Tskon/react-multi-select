@@ -84,6 +84,10 @@ export default function Index(props) {
     console.log(e.key)
     switch (e.key) {
       case 'ArrowUp':
+        if (!isOptionsOpen) {
+          setOptionsOpenStatus(true)
+          break
+        }
         if (activeOption > 0)
           setActiveOption(activeOption - 1)
         else
@@ -91,6 +95,10 @@ export default function Index(props) {
         break
 
       case 'ArrowDown':
+        if (!isOptionsOpen) {
+          setOptionsOpenStatus(true)
+          break
+        }
         if (activeOption < selectOptions.length - 1)
           setActiveOption(activeOption + 1)
         else
