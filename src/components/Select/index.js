@@ -10,17 +10,31 @@ export default function Index(props) {
   const [values, setValues] = useState([])
   const [activeOption, setActiveOption] = useState(0)
   const [isOptionsOpen, setOptionsOpenStatus] = useState(false)
+  const [isReadyToDelete, setReadyToDeleteStatus] = useState(false)
 
-  const onWrapperClick = (e) => {
-    e.stopPropagation()
+  const onWrapperClick = () => {
+    setOptionsOpenStatus(true)
     searchRef.current.focus()
   }
 
   useEffect(() => {
-    if (!isOptionsOpen) return
+    if (searchValue) setOptionsOpenStatus(true)
+  }, [searchValue])
 
-    const clickOutside = () => {
+  useEffect(() => {
+    setReadyToDeleteStatus(false)
+  }, [searchValue, values])
+
+  const wrapperRef = useRef()
+  useEffect(() => {
+    if (!isOptionsOpen) return setActiveOption(0)
+
+    const clickOutside = (e) => {
+      if (!wrapperRef.current || wrapperRef.current.contains(e.target)) {
+        return
+      }
       setOptionsOpenStatus(false)
+      setReadyToDeleteStatus(false)
     }
 
     window.addEventListener('click', clickOutside)
@@ -29,31 +43,34 @@ export default function Index(props) {
     }
   })
 
-  const selectOptions = selectValues
-    .filter(value => {
-      const isSearched = !searchValue || value.toLowerCase().includes(searchValue.toLowerCase())
-      return !values.includes(value) && isSearched
-    })
-    .map((value, i) => (
-      <li
-        className={`
-          select-option
-          ${(i === activeOption) ? 'select-option-active' : ''}
-        `}
-        key={value}
-        onClick={() => {
-          setSearchValue('')
-          setValues([...values, value])
-        }}
-        onMouseOver={() => {setActiveOption(i)}}
-      >
-        {value}
-      </li>
+  const valuesForOptions = selectValues.filter(value => {
+    const isSearched = !searchValue || value.toLowerCase().includes(searchValue.toLowerCase())
+    return !values.includes(value) && isSearched
+  })
+
+  const selectOptions = valuesForOptions.map((value, i) => (
+    <li
+      className={`
+        select-option
+        ${(i === activeOption) ? 'select-option-active' : ''}
+      `}
+      key={value}
+      onClick={() => {
+        setSearchValue('')
+        setValues([...values, value])
+      }}
+      onMouseOver={() => {setActiveOption(i)}}
+    >
+      {value}
+    </li>
   ))
 
-  const selectedValues = values.map(selectedValue => (
+  const selectedValues = values.map((selectedValue, i) => (
     <button
-      className="selected-value"
+      className={`
+        selected-value
+        ${(isReadyToDelete && i === values.length - 1) ? 'ready-to-delete' : ''}
+      `}
       key={selectedValue}
       onClick={() => {
         setValues(values.filter((value) => value !== selectedValue))
@@ -64,6 +81,7 @@ export default function Index(props) {
   ))
 
   const keyHandler = (e) => {
+    console.log(e.key)
     switch (e.key) {
       case 'ArrowUp':
         if (activeOption > 0)
@@ -87,12 +105,28 @@ export default function Index(props) {
       case 'Tab':
         setOptionsOpenStatus(false)
         break
-    }
 
+      case 'Enter':
+        if (!isOptionsOpen) break
+        setValues([...values, valuesForOptions[activeOption]])
+        setOptionsOpenStatus(false)
+        break
+
+      case 'Backspace':
+        if (searchValue) break
+        if (isReadyToDelete) {
+          setValues([...values.slice(0, -1)])
+        } else {
+          setReadyToDeleteStatus(true)
+          setOptionsOpenStatus(false)
+        }
+        break
+    }
   }
 
   return (
     <div
+      ref={wrapperRef}
       className="select-input-wrapper"
       onClick={onWrapperClick}
       onKeyDown={keyHandler}
@@ -115,7 +149,9 @@ export default function Index(props) {
       />
 
       { isOptionsOpen &&
-      (<ul className="select-options">
+      (<ul className="select-options" style={{
+        top: wrapperRef.current.clientHeight
+      }}>
         {(selectOptions.length) ? selectOptions : 'Ничего не найдено'}
       </ul>)
       }

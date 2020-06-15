@@ -1,6 +1,7 @@
 .select-input-wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border: 1px solid var(--gray);
   border-radius: var(--border-radius);
@@ -16,7 +17,8 @@
 }
 
 .search-input {
-  width: 100%;
+  width: auto;
+  min-width: 120px;
   border: none;
   padding: var(--offset-small) 0;
   outline: none;
@@ -33,7 +35,9 @@
 }
 
 .selected-value:hover,
-.selected-value:focus {
+.selected-value:focus,
+.ready-to-delete
+{
   background-color: white;
 }
 
@@ -52,7 +56,6 @@
   width: 100%;
   min-height: 35px;
   left: 0;
-  top: 32px;
   list-style: none;
   background-color: white;
   border: 1px solid var(--gray);
