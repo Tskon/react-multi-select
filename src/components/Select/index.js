@@ -81,7 +81,6 @@ export default function Index(props) {
   ))
 
   const keyHandler = (e) => {
-    console.log(e.key)
     switch (e.key) {
       case 'ArrowUp':
         if (!isOptionsOpen) {
