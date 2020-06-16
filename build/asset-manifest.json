@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-multi-select/static/css/main.8dd5206c.chunk.css",
+    "main.js": "/react-multi-select/static/js/main.9208add3.chunk.js",
+    "main.js.map": "/react-multi-select/static/js/main.9208add3.chunk.js.map",
+    "runtime-main.js": "/react-multi-select/static/js/runtime-main.8c42846b.js",
+    "runtime-main.js.map": "/react-multi-select/static/js/runtime-main.8c42846b.js.map",
+    "static/js/2.856c0737.chunk.js": "/react-multi-select/static/js/2.856c0737.chunk.js",
+    "static/js/2.856c0737.chunk.js.map": "/react-multi-select/static/js/2.856c0737.chunk.js.map",
+    "index.html": "/react-multi-select/index.html",
+    "precache-manifest.a4800a585273f9a8ca82bb3b04f05ecc.js": "/react-multi-select/precache-manifest.a4800a585273f9a8ca82bb3b04f05ecc.js",
+    "service-worker.js": "/react-multi-select/service-worker.js",
+    "static/css/main.8dd5206c.chunk.css.map": "/react-multi-select/static/css/main.8dd5206c.chunk.css.map",
+    "static/js/2.856c0737.chunk.js.LICENSE.txt": "/react-multi-select/static/js/2.856c0737.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c42846b.js",
+    "static/js/2.856c0737.chunk.js",
+    "static/css/main.8dd5206c.chunk.css",
+    "static/js/main.9208add3.chunk.js"
+  ]
+}

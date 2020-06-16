@@ -44,7 +44,17 @@
       <recent name="$PROJECT_DIR$/src/components/Select" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -55,6 +65,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.build" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -87,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592262504349</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add gh pages">
+      <created>1592262897046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592262897046</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add server">
+      <created>1592264927673</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592264927673</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,37 +134,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add gh-pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gh-pages" />
+    <MESSAGE value="add gh pages" />
+    <MESSAGE value="add server" />
+    <option name="LAST_COMMIT_MESSAGE" value="add server" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592219973431">
+    <state x="360" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592264365151">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state x="360" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1043@0.23.1792.1043" timestamp="1592219973431" />
+    <state x="360" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1043@0.23.1792.1043" timestamp="1592264365151" />
     <state x="604" y="354" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592245133657">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
     <state x="604" y="354" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1043@0.23.1792.1043" timestamp="1592245133657" />
-    <state x="479" y="145" key="CommitChangelistDialog2" timestamp="1592262504208">
+    <state x="479" y="145" key="CommitChangelistDialog2" timestamp="1592265565407">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state x="479" y="145" key="CommitChangelistDialog2/0.23.1792.1043@0.23.1792.1043" timestamp="1592262504208" />
-    <state width="1750" height="285" key="GridCell.Tab.0.bottom" timestamp="1592262310940">
+    <state x="479" y="145" key="CommitChangelistDialog2/0.23.1792.1043@0.23.1792.1043" timestamp="1592265565407" />
+    <state width="1750" height="285" key="GridCell.Tab.0.bottom" timestamp="1592265601999">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state width="1750" height="285" key="GridCell.Tab.0.bottom/0.23.1792.1043@0.23.1792.1043" timestamp="1592262310940" />
-    <state width="1750" height="285" key="GridCell.Tab.0.center" timestamp="1592262310939">
+    <state width="1750" height="285" key="GridCell.Tab.0.bottom/0.23.1792.1043@0.23.1792.1043" timestamp="1592265601999" />
+    <state width="1750" height="285" key="GridCell.Tab.0.center" timestamp="1592265601998">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state width="1750" height="285" key="GridCell.Tab.0.center/0.23.1792.1043@0.23.1792.1043" timestamp="1592262310939" />
-    <state width="1750" height="285" key="GridCell.Tab.0.left" timestamp="1592262310939">
+    <state width="1750" height="285" key="GridCell.Tab.0.center/0.23.1792.1043@0.23.1792.1043" timestamp="1592265601998" />
+    <state width="1750" height="285" key="GridCell.Tab.0.left" timestamp="1592265601997">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state width="1750" height="285" key="GridCell.Tab.0.left/0.23.1792.1043@0.23.1792.1043" timestamp="1592262310939" />
-    <state width="1750" height="285" key="GridCell.Tab.0.right" timestamp="1592262310940">
+    <state width="1750" height="285" key="GridCell.Tab.0.left/0.23.1792.1043@0.23.1792.1043" timestamp="1592265601997" />
+    <state width="1750" height="285" key="GridCell.Tab.0.right" timestamp="1592265601998">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state width="1750" height="285" key="GridCell.Tab.0.right/0.23.1792.1043@0.23.1792.1043" timestamp="1592262310940" />
+    <state width="1750" height="285" key="GridCell.Tab.0.right/0.23.1792.1043@0.23.1792.1043" timestamp="1592265601998" />
     <state x="698" y="262" key="RollbackChangesDialog" timestamp="1592220452233">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
@@ -145,10 +175,10 @@
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
     <state x="397" y="183" key="SettingsEditor/0.23.1792.1043@0.23.1792.1043" timestamp="1592221872440" />
-    <state x="459" y="507" key="Vcs.Push.Dialog.v2" timestamp="1592262579281">
+    <state x="459" y="507" key="Vcs.Push.Dialog.v2" timestamp="1592264929576">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
-    <state x="459" y="507" key="Vcs.Push.Dialog.v2/0.23.1792.1043@0.23.1792.1043" timestamp="1592262579281" />
+    <state x="459" y="507" key="Vcs.Push.Dialog.v2/0.23.1792.1043@0.23.1792.1043" timestamp="1592264929576" />
     <state x="554" y="301" width="683" height="486" key="find.popup" timestamp="1592242233673">
       <screen x="0" y="23" width="1792" height="1043" />
     </state>
